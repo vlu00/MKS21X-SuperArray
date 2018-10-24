@@ -8,8 +8,10 @@ public class SuperArray{
   }
 
   public void clear() {
+    for (int i = 0; i < size; i++) {
+      data[i] = null;
+    }
     size = 0;
-    //needs to remove all elements
   }
 
   public int size() {
@@ -20,21 +22,42 @@ public class SuperArray{
     return (size == 0);
   }
 
-  public boolean add(String) {
-    data = 
+  public boolean add(String element) {
+    data[size] = element;
+    size++;
+    return true;
   }
-  /*public String toString() {
-    return "[ ";
-    for (int i = 0; i < size; i++) {
-      return data[i];
+
+  public String get(int index) {
+    if (index < 0 || index >= size()) {
+      return null;
     }
-    return " ]";
+    else {
+      return data[index];
+    }
   }
-  */
-}
 
+  public String set(int index, String element) {
+    if (index < 0 || index >= size()) {
+      return null;
+    }
+    else {
+      return data[index];
+      data[index] = element;
+    }
+  }
 
-
-
-
+  public String toString() {
+    return "[ " + data + " ]";
+    String s = "";
+    for (int i = 0; i < size; i++) {
+      if (data[i] == null) {
+        s = s + "null";
+      }
+      else {
+        s = s + data[i];
+      }
+    }
+    return s;
+  }
 }
