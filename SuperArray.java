@@ -27,7 +27,7 @@ public class SuperArray{
     size++;
     return true;
   }
-/*
+
   public String get(int index) {
     if (index < 0 || index >= size()) {
       return null;
@@ -36,7 +36,7 @@ public class SuperArray{
       return data[index];
     }
   }
-
+/*
   public String set(int index, String element) {
     if (index < 0 || index >= size()) {
       return null;
