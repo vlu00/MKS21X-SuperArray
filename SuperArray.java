@@ -36,17 +36,18 @@ public class SuperArray{
       return data[index];
     }
   }
-/*
+
   public String set(int index, String element) {
     if (index < 0 || index >= size()) {
       return null;
     }
     else {
-      return data[index];
+      String x = data[index];
       data[index] = element;
+      return x;
     }
   }
-*/
+
   public String toString() {
     String s = "[";
     for (int i = 0; i < data.length; i++) {
