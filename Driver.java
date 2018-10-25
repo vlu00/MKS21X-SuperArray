@@ -10,10 +10,11 @@ public class Driver{
     System.out.println(SA.set(0, "hello"));
     System.out.println(SA.set(1, "fish"));
     System.out.println(SA);
-    for (int i = 1; i < SA.length -1; i++) {
+    for (int i = 1; i < 9; i++) {
       System.out.println(SA.add("dog"));
     }
     System.out.println(SA);
-      System.out.println(SA.add("Fish"));
+    System.out.println(SA.add("Fish"));
+    System.out.println(SA);
   }
 }
