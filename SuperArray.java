@@ -27,7 +27,7 @@ public class SuperArray{
     size++;
     return true;
   }
-
+/*
   public String get(int index) {
     if (index < 0 || index >= size()) {
       return null;
@@ -46,18 +46,26 @@ public class SuperArray{
       data[index] = element;
     }
   }
-
+*/
   public String toString() {
-    String s = "[ ";
-    for (int i = 0; i < size; i++) {
-      if (data[i] == null) {
-        s = s + "null";
+    String s = "[";
+    for (int i = 0; i < data.length; i++) {
+      if (i == data.length -1 ) {
+        if (data[i] == null) {
+          s = s + "null";
+        }
+        else {
+          s = s + data[i];
+        }
+      }
+      else if (data[i] == null) {
+        s = s + "null, ";
       }
       else {
-        s = s + data[i];
+        s = s + data[i] + ", ";
       }
     }
-    s = s + " ]"; 
+    s = s + "]";
     return s;
   }
 }
