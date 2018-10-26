@@ -124,4 +124,20 @@ public class SuperArray{
     return index;
   }
 
+  public int lastIndexOf(String target) {
+    int index = 0;
+    for(int i = 0; i < size; i++) {
+      if (i == size && data[size - i] != target) {
+        return -1;
+      }
+      if (data[size - i] == target) {
+        return size - index;
+      }
+      else {
+        index++;
+      }
+    }
+    return size - index;
+  }
+
 }

@@ -21,5 +21,9 @@ public class Driver{
     System.out.println(SA.contains("puppies"));
     System.out.println(SA.indexOf("puppies"));
     System.out.println(SA.indexOf("fish"));
+    System.out.println(SA.lastIndexOf("puppies"));
+    System.out.println(SA);
+    System.out.println(SA.size());
+    System.out.println(SA.lastIndexOf("dog"));
   }
 }
