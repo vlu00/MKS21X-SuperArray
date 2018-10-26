@@ -139,7 +139,7 @@ public class SuperArray{
 
   public void add(int index, String element) {
     if (index < 0 || index > size()) {
-      data = data;
+      System.out.println("error: index out of range");
     }
     else {
       if (size == data.length) {

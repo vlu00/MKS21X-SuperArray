@@ -29,5 +29,12 @@ public class Driver{
     SA.add(19, "puppy");
     SA.add(2, "puppy");
     System.out.println(SA);
+    System.out.println("___________");
+    SA.remove(2);
+    System.out.println(SA);
+    System.out.println(SA.size());
+    System.out.println(SA.remove(30));
+    System.out.println(SA);
+
   }
 }
