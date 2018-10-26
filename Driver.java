@@ -25,5 +25,9 @@ public class Driver{
     System.out.println(SA);
     System.out.println(SA.size());
     System.out.println(SA.lastIndexOf("dog"));
+    System.out.println("___________");
+    SA.add(19, "puppy");
+    SA.add(2, "puppy");
+    System.out.println(SA);
   }
 }

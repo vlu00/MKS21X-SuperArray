@@ -25,9 +25,6 @@ public class SuperArray{
   public boolean add(String element) {
     if (size == data.length) {
       resize();
-      data[size] = element;
-      size++;
-      return true;
     }
     data[size] = element;
     size++;
@@ -138,6 +135,73 @@ public class SuperArray{
       }
     }
     return size - index;
+  }
+
+  public void add(int index, String element) {
+    if (index < 0 || index > size()) {
+      data = data;
+    }
+    else {
+      if (size == data.length) {
+        resize();
+      }
+      String[] ary = new String [data.length];
+      for (int i = 0; i < size; i++) {
+        if (i < index) {
+          ary[i] = data[i];
+        }
+        else if (i == index) {
+          ary[i] = element;
+        }
+        else {
+          ary[i] = data[i-1];
+        }
+      }
+      size++;
+      data = ary;
+    }
+  }
+
+  public String remove(int index) {
+    if (index < 0 || index >= size()) {
+      return null;
+    }
+    else {
+      String[] ary = new String [data.length];
+      for (int i = 0; i < size-1; i++) {
+        if (i < index) {
+          ary[i] = data[i];
+        }
+        else {
+          ary[i] = data[i+1];
+        }
+      }
+      size = size - 1;
+      data = ary;
+      return data.toString();
+    }
+  }
+
+  public boolean remove(String element) {
+    String[] ary = new String [data.length];
+    boolean found = false;
+    for (int i = 0; i < size-1; i++) {
+      if (data[i] == element && !(found)) {
+        ary[i] = data[i+1];
+        found = true;
+      }
+      else {
+        ary[i] = data[i];
+      }
+    }
+    if (ary.size() ==  data.size()) {
+      return false;
+    }
+    else {
+      size = size - 1;
+      data = ary;
+      return true;
+    }
   }
 
 }
