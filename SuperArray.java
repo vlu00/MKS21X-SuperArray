@@ -181,7 +181,7 @@ public class SuperArray{
       return data.toString();
     }
   }
-
+/*
   public boolean remove(String element) {
     String[] ary = new String [data.length];
     boolean found = false;
@@ -203,5 +203,5 @@ public class SuperArray{
       return true;
     }
   }
-
+*/
 }
