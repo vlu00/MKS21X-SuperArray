@@ -35,6 +35,11 @@ public class Driver{
     System.out.println(SA.size());
     System.out.println(SA.remove(30));
     System.out.println(SA);
+    System.out.println("___________");
+    System.out.println(SA);
+    SA.remove("dog");
+    System.out.println(SA.remove("dog"));
+    System.out.println(SA);
 
   }
 }

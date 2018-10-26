@@ -181,12 +181,15 @@ public class SuperArray{
       return data.toString();
     }
   }
-/*
+
   public boolean remove(String element) {
     String[] ary = new String [data.length];
     boolean found = false;
     for (int i = 0; i < size-1; i++) {
-      if (data[i] == element && !(found)) {
+      if (found) {
+        ary[i] = data[i+1];
+      }
+      else if (data[i] == element && !(found)) {
         ary[i] = data[i+1];
         found = true;
       }
@@ -194,7 +197,7 @@ public class SuperArray{
         ary[i] = data[i];
       }
     }
-    if (ary.size() ==  data.size()) {
+    if (!found) {
       return false;
     }
     else {
@@ -203,5 +206,5 @@ public class SuperArray{
       return true;
     }
   }
-*/
+
 }
