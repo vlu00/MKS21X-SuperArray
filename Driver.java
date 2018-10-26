@@ -19,6 +19,7 @@ public class Driver{
     System.out.println(SA.toStringDebug());
     System.out.println("___________");
     System.out.println(SA.contains("puppies"));
-
+    System.out.println(SA.indexOf("puppies"));
+    System.out.println(SA.indexOf("fish"));
   }
 }

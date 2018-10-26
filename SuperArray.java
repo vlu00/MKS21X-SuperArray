@@ -108,5 +108,20 @@ public class SuperArray{
     return x;
   }
 
+  public int indexOf(String target) {
+    int index = 0;
+    for(int i = 0; i < size; i++) {
+      if (i == size - 1 && data[i] != target) {
+        return -1;
+      }
+      if (data[i] == target) {
+        return index;
+      }
+      else {
+        index++;
+      }
+    }
+    return index;
+  }
 
 }
