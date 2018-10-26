@@ -56,18 +56,10 @@ public class SuperArray{
 
   public String toString() {
     String s = "[";
-    for (int i = 0; i < data.length; i++) {
-      if (i == data.length -1 ) {
-        if (data[i] == null) {
-          s = s + "null";
-        }
-        else {
+    for (int i = 0; i < size; i++) {
+      if (i == size -1 ) {
           s = s + data[i];
         }
-      }
-      else if (data[i] == null) {
-        s = s + "null, ";
-      }
       else {
         s = s + data[i] + ", ";
       }
@@ -76,8 +68,34 @@ public class SuperArray{
     return s;
   }
 
+  public String toStringDebug() {
+    String s = "[";
+    for (int i = 0; i < data.length; i++) {
+      if (i == data.length -1 ) {
+        if (data[i] == null) {
+          s = s + null;
+        }
+        else {
+          s = s + data[i];
+        }
+      }
+      else if (data[i] == null) {
+        s = s + null+ ", ";
+      }
+      else {
+        s = s + data[i] + ", ";
+      }
+    }
+    s = s + "]";
+    return s;
+   }
+
   private void resize() {
-    String[] ary = new String[data.length * 2];
+    String[] ary = new String[size * 2];
+    for(int i = 0; i < size; i++) {
+      ary[i] = data[i];
+    }
     data = ary;
   }
+
 }
