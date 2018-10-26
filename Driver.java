@@ -17,5 +17,8 @@ public class Driver{
     System.out.println(SA.add("Fish"));
     System.out.println(SA);
     System.out.println(SA.toStringDebug());
+    System.out.println("___________");
+    System.out.println(SA.contains("puppies"));
+
   }
 }
