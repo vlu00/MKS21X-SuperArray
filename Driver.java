@@ -40,7 +40,6 @@ public class Driver{
     SA.remove("dog");
     System.out.println(SA.remove("dog"));
     System.out.println(SA);
-
     System.out.println("___________");
     SuperArray A = new SuperArray(0);
     System.out.println(A.toStringDebug());
@@ -48,6 +47,20 @@ public class Driver{
     System.out.println(A);
     SuperArray B = new SuperArray(15);
     System.out.println(B.toStringDebug());
-
+    try{
+      SuperArray TEST = new SuperArray(-20);
+    } catch (IllegalArgumentException e){
+      e.printStackTrace();
+    }
+    try{
+      SA.remove(30);
+    } catch (IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
+    try{
+      SA.add(-3, "word");
+    } catch (IndexOutOfBoundsException e){
+      e.printStackTrace();
+    }
   }
 }
