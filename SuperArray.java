@@ -148,7 +148,7 @@ public class SuperArray{
 
   public void add(int index, String element) {
     if (index < 0 || index > size()) {
-      throw new IndexOutOfBoundsException("Cannot add element to index.");
+      throw new IndexOutOfBoundsException("Cannot add element to this index.");
     }
     else {
       if (size == data.length) {
@@ -173,7 +173,7 @@ public class SuperArray{
 
   public String remove(int index) {
     if (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("Cannot remove element to index.");
+      throw new IndexOutOfBoundsException("Cannot remove element from this index.");
     }
     else {
       String[] ary = new String [data.length];
