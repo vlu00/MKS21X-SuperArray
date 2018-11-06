@@ -107,7 +107,7 @@ public class SuperArray{
   public boolean contains(String target) {
     boolean x = false;
     for (int i = 0; i < size; i++) {
-      if (data[i] == target) {
+      if (data[i].equals(target)) {
         return true;
       }
     }
@@ -115,35 +115,23 @@ public class SuperArray{
   }
 
   public int indexOf(String target) {
-    int index = 0;
-    for(int i = 0; i < size; i++) {
-      if (i == size - 1 && data[i] != target) {
-        return -1;
-      }
-      if (data[i] == target) {
-        return index;
-      }
-      else {
-        index++;
+    int index = -1;
+    for (int i = 0; i < size; i++) {
+      if (data[i].equals(target)) {
+        return i;
       }
     }
     return index;
   }
 
   public int lastIndexOf(String target) {
-    int index = 0;
-    for(int i = 0; i < size; i++) {
-      if (i == size-1 && data[size - i] != target) {
-        return -1;
-      }
-      if (data[size - i] == target) {
-        return size - index;
-      }
-      else {
-        index++;
+    int index = -1;
+    for(int i = size - 1; i > -1; i--) {
+      if (data[i] == target) {
+        return i;
       }
     }
-    return size - index;
+    return index;
   }
 
   public void add(int index, String element) {
